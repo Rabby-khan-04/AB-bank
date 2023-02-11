@@ -14,3 +14,9 @@ document.querySelector("#submit-btn").addEventListener("click", () => {
     alert("Use Your Valid Info To Access Your Account Dashboard");
   }
 });
+
+// Diposit Witdraw Function
+
+document.querySelector("#diposit-btn").addEventListener("click", () => {
+  console.log("message");
+});
