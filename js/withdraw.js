@@ -4,18 +4,19 @@ document.querySelector("#withdraw-btn").addEventListener("click", () => {
   const totalWithdraw = Number(totalWithdrawStr.innerText);
 
   const withdrawField = document.querySelector("#withdraw-field");
-
   const withdrawAmount = Number(withdrawField.value);
-
-  const totalAmountWithdraw = totalWithdraw + withdrawAmount;
-
-  totalWithdrawStr.innerText = totalAmountWithdraw;
-  withdrawField.value = "";
 
   const totalBalance = document.querySelector("#balance");
   const totalAmount = Number(totalBalance.innerText);
 
-  const currentBalance = totalAmount - withdrawAmount;
+  if (withdrawAmount <= totalAmount) {
+    const totalAmountWithdraw = totalWithdraw + withdrawAmount;
 
-  totalBalance.innerText = currentBalance;
+    totalWithdrawStr.innerText = totalAmountWithdraw;
+    withdrawField.value = "";
+
+    const currentBalance = totalAmount - withdrawAmount;
+
+    totalBalance.innerText = currentBalance;
+  } else alert("Baper Bank A Porjapto Poriman Taka Nai. Income Suru Koran");
 });
