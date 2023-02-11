@@ -8,7 +8,7 @@ document.querySelector("#submit-btn").addEventListener("click", () => {
   const pass = passField.value;
 
   if (email == "ajrabbyk72@gmail.com" && pass == "Rabby12345") {
-    location.href = "/" + "dashboard.html";
+    location.href = "./" + "dashboard.html";
     email.value = "";
   } else {
     alert("Use Your Valid Info To Access Your Account Dashboard");
